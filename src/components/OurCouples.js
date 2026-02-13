@@ -282,6 +282,12 @@ export default function OurCouples() {
       {couplesData.map((couple) => (
         <CoupleCarousel key={couple.id} couple={couple} />
       ))}
+      <section className="footer">
+        <h2 className="footer-title">Fiestas By Emily</h2>
+        <h3>Service Areas: San Fernando Valley, Los Angeles, Burbank, Glendale, Pasadena, Whittier, Fullerton, Long Beach, Simi Valley, Orange County, Santa Clarita, Antelope Valley, Downey, Palmdale, West Hills</h3>
+        <p>Feel free to book a consultation!</p>
+      <div className="footer-copyright">HAM Designs</div>
+      </section>
     </div>
   );
 }
