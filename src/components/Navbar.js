@@ -22,12 +22,23 @@ export default function Navbar() {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false);
+  };
+
+  // Handle clicks on any link inside the nav
+  const handleNavClick = (e) => {
+    // Check if the clicked element is a link or inside a link
+    if (e.target.tagName === 'A' || e.target.closest('a')) {
+      closeMobileMenu();
+    }
+  };
+
   return (
     <header className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
         <div className="logo-container">
-          <Link to="/" className="logo-link">
-            {/* Logo that shrinks smoothly */}
+          <Link to="/" className="logo-link" onClick={closeMobileMenu}>
             <div className={`logo-wrapper ${scrolled ? 'compact' : ''}`}>
               <div className="logo-content">
                 <span className="logo-fiestas">FIESTAS</span>
@@ -37,7 +48,10 @@ export default function Navbar() {
           </Link>
         </div>
 
-        <nav className={`nav-links ${mobileMenuOpen ? 'mobile-open' : ''}`}>
+        <nav 
+          className={`nav-links ${mobileMenuOpen ? 'mobile-open' : ''}`}
+          onClick={handleNavClick} // Single handler for all links
+        >
           <Link to="/" className="nav-link">Home</Link>
           <Link to="/pricing" className="nav-link">Pricing</Link>
           <Link to="/our-couples" className="nav-link">Our Couples</Link>
@@ -49,8 +63,6 @@ export default function Navbar() {
           >
             Inquire Now
           </a>
-          {/* <Link to="/inquire" className="nav-link"></Link> */}
-          {/* <Link to="/contact" className="nav-link">Contact</Link> */}
           <a
             className="instagram-link"
             href="https://www.instagram.com/fiestasbyemily"
