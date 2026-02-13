@@ -1,0 +1,581 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.content {
+    margin-top: 0 !important; 
+    padding: 0 !important;
+}
+
+.home-container {
+    width: 100%;
+}
+
+.home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+    margin-top: 0;
+}
+
+.home-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.home-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+    filter: brightness(0.6);
+}
+
+.home-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+    padding-top: 180px;
+}
+
+.home-heading {
+    font-size: 6rem;
+    font-family: 'Cormorant Garamond', serif;
+    margin-bottom: 0.5rem !important;
+}
+
+.home-subheading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    margin-top: 0.5rem !important;
+}
+
+.home-button {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%);
+    border-radius: 50px;
+    padding: 14px 15px;
+    font-family: 'Montserrat', 'Helvetica';
+    font-size: 1.1rem;
+    margin: 3rem;
+    cursor: pointer;
+    border: none;
+    color: white;
+}
+
+.home-button:hover {
+    background: linear-gradient(135deg, #207f74 0%, #207f74 100%);
+}
+
+.aboutMe-section {
+    flex: 0 0 auto;
+    padding: 3rem 8rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 8rem;
+    background-color: #f9f9f9;
+    min-height: 20%;
+}
+
+.aboutMe-card {
+    flex: 1;
+    max-width: 50%;
+}
+
+.aboutMe-section h2 {
+    font-size: 3rem;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.aboutMe-section h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.aboutMe-section p {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.right-side-space {
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.aboutMe-image {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    filter: grayscale(100%);
+    transition: filter 0.5s ease;
+    will-change: filter;
+}
+
+.aboutMe-image:hover {
+    filter: grayscale(0%);
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Reviews section */
+.reviews-section {
+    padding: 4rem 2rem;
+    background-color: white;
+    overflow: hidden;
+}
+
+.review-link {
+    text-align: center;
+    display: block;
+    margin: 1rem 0.5rem;
+    color: #207f74;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.review-link:hover {
+    text-decoration: underline;
+}
+
+.reviews-section h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.review-highlight {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.review-card {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.review-text {
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    flex-grow: 1;
+}
+
+.review-author {
+    text-align: center;
+    font-weight: bold;
+    color: #207f74;
+    margin-top: auto;
+}
+
+.carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    flex: 1;
+}
+
+.carousel-btn {
+    background-color: #207f74;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+    flex-shrink: 0;
+}
+
+.carousel-btn:hover {
+    background-color: #166b61;
+}
+
+.carousel-btn:active {
+    transform: scale(0.95);
+}
+
+.mobile-carousel {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    position: relative;
+    padding: 0 0.5rem;
+}
+
+.mobile-carousel-container {
+    flex: 1;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.mobile-review-card {
+    width: 100%;
+    margin: 0 auto;
+    cursor: grab;
+    transition: transform 0.2s;
+}
+
+.mobile-review-card:active {
+    cursor: grabbing;
+}
+
+.mobile-carousel-btn {
+    background-color: #207f74;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: background-color 0.3s;
+}
+
+.mobile-carousel-btn:hover {
+    background-color: #166b61;
+}
+
+.mobile-carousel-btn:active {
+    transform: scale(0.95);
+}
+
+.mobile-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+    padding: 0 0.5rem;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #ccc;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot:hover {
+    background-color: #207f74;
+}
+
+.active-dot {
+    background-color: #207f74;
+    width: 24px;
+    border-radius: 12px;
+}
+
+.footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+
+.footer-title {
+    font-size: 2rem;
+    font-family: 'Cormorant Garamond', serif;
+    margin-bottom: 1.5rem;
+    color: white;
+    letter-spacing: 2px;
+}
+
+.footer h3 {
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgba(255, 255, 255, 0.9);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer p {
+    font-size: 1.1rem;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 3rem;
+    color: white;
+}
+
+.footer-copyright {
+    position: absolute;
+    bottom: 1rem;
+    right: 2rem;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+.desktop-only {
+    display: flex !important;
+}
+
+.mobile-only {
+    display: none !important;
+}
+
+@media screen and (max-width: 992px) and (min-width: 769px) {
+    .reviews-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .review-card:last-child {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .home {
+        height: 100vh;
+        min-height: 100vh;
+    }
+    
+    .home-content {
+        padding-top: 100px !important;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .home-heading {
+        font-size: 2.8rem !important;
+        letter-spacing: 3px !important;
+        margin-bottom: 1.5rem !important;
+    }
+    
+    .home-subheading {
+        font-size: 1.3rem !important;
+        letter-spacing: 1.5px !important;
+        padding: 0 10px;
+        margin-bottom: 2rem !important;
+    }
+    
+    .home-button {
+        padding: 12px 30px;
+        font-size: 1rem;
+        margin-top: 1rem;
+    }
+    
+    .aboutMe-section {
+        flex-direction: column;
+        padding: 3rem 20px;
+        gap: 2rem;
+    }
+    
+    .aboutMe-card,
+    .right-side-space {
+        max-width: 100%;
+    }
+    
+    .aboutMe-section h2 {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+    
+    .aboutMe-section h3 {
+        font-size: 1.7rem;
+        text-align: center;
+    }
+    
+    .aboutMe-section p {
+        text-align: center;
+    }
+    
+    .aboutMe-image {
+        max-width: 300px;
+        margin: 0 auto;
+        filter: grayscale(0%);
+    }
+
+    .reviews-section {
+        padding: 3rem 0.5rem;
+    }
+    
+    .reviews-section h1 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        padding: 0 1rem;
+    }
+    
+    .desktop-only {
+        display: none !important;
+    }
+    
+    .mobile-only {
+        display: flex !important;
+    }
+    
+    .mobile-carousel {
+        display: flex;
+    }
+    
+    .review-card {
+        padding: 1.5rem;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    
+    .review-highlight {
+        font-size: 1.3rem;
+    }
+    
+    .carousel-btn {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .home-content {
+        padding-top: 90px !important;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .home-heading {
+        font-size: 2rem !important;
+        letter-spacing: 2px !important;
+    }
+    
+    .home-subheading {
+        font-size: 1.1rem !important;
+        letter-spacing: 1px !important;
+    }
+    
+    .aboutMe-section h2 {
+        font-size: 1.8rem;
+    }
+    
+    .aboutMe-section h3 {
+        font-size: 1.5rem;
+    }
+    
+    .aboutMe-image {
+        max-width: 100%;
+    }
+    
+    .reviews-section {
+        padding: 2rem 0.25rem;
+    }
+    
+    .review-card {
+        padding: 1.25rem;
+    }
+    
+    .mobile-carousel-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .mobile-carousel-container {
+        max-width: 280px;
+    }
+    
+    .review-card {
+        padding: 1rem;
+    }
+    
+    .review-highlight {
+        font-size: 1.2rem;
+    }
+    
+    .review-text {
+        font-size: 0.95rem;
+    }
+    
+    .mobile-carousel-btn {
+        width: 28px;
+        height: 28px;
+        font-size: 0.9rem;
+    }
+    
+    .mobile-dots {
+        gap: 0.35rem;
+    }
+    
+    .dot {
+        width: 6px;
+        height: 6px;
+    }
+    
+    .active-dot {
+        width: 20px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .carousel-container {
+        gap: 0.75rem;
+        padding: 0 1rem;
+    }
+    
+    .reviews-grid {
+        gap: 1.5rem;
+    }
+    
+    .review-card {
+        padding: 1.5rem;
+    }
+}
