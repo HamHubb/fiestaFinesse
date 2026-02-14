@@ -57,7 +57,7 @@
 
 .home-heading {
     font-size: 6rem;
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Libre Baskerville', serif;
     margin-bottom: 0.5rem !important;
 }
 
@@ -101,6 +101,7 @@
 
 .aboutMe-section h2 {
     font-size: 3rem;
+    font-family: "Libre Baskerville";
     text-align: left;
     margin-bottom: 2rem;
 }
@@ -141,6 +142,7 @@
 
 /* Reviews section */
 .reviews-section {
+    font-family: "Libre Baskerville";
     padding: 4rem 2rem;
     background-color: white;
     overflow: hidden;
